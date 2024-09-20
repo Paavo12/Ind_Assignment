@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Our Website - Homepage</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Windhoek Estate</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="buySection.html">Buy</a></li>
+            <li><a href="rentSection.html">Rent</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+        <form id="search-form">
+            <input type="text" id="quick-search" placeholder="Quick search...">
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+    
+    <main>
+        <section id="introduction">
+        
+            <p>Lets help you find your dream house</p>
+        </section>
+
+    
+
+        <section id="search-results" style="display: none;">
+            <h2>Search Results</h2>
+            <div id="results-list">
+            </div>
+            <div id="map-view">
+                <p>Map View (Placeholder)</p>
+            </div>
+            <button id="toggle-map-view">Toggle Map View</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = document.getElementById('quick-search').value;
+            alert('Searching for: ' + searchTerm);
+            document.getElementById('search-results').style.display = 'block';
+        });
+
+        document.getElementById('toggle-map-view').addEventListener('click', function() {
+            const mapView = document.getElementById('map-view');
+            mapView.style.display = mapView.style.display === 'none' ? 'flex' : 'none';
+        });  
